@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Kind:</strong>
+  <%= @variation.kind %>
+</p>
+
+<p>
+  <strong>Book:</strong>
+  <%= @variation.book_id %>
+</p>
+
+<%= link_to 'Edit', edit_variation_path(@variation) %> |
+<%= link_to 'Back', variations_path %>
