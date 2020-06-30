@@ -5,7 +5,8 @@
   <%= @user.name %>
 </p>
 
-<% @user.books.preload(:variations).each do |book| %>
+<%# @user.books.preload(:variations).each do |book| %>
+<% @user.books.eager_load(:variations).each do |book| %>
   <% book.variations.each do |variation| %>
     <p><%= variation.kind %></p>
   <% end %>
